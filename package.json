@@ -1,0 +1,14 @@
+{
+  "name": "mqtt-maxcube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mqtt_maxcube.js",
+  "dependencies": {
+    "mqtt": "~0.3.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
