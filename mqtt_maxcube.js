@@ -9,6 +9,16 @@ client.subscribe('maxcube-control');
 
 myMaxCube.once('connected', function (cubeStatus) {
   console.log(cubeStatus);
+  
+  client.subscribe('maxcube-control');
+
+	client.on('message', function (topic, message) {
+  		console.log(message);
+  		var address = message.split(" ")[0];
+  		var temp = message.split(" ")[1];
+  		console.log("setting "+address+" to "+temp);
+		myMaxCube.setTemperature(address, temp);
+	});
 });
 
 myMaxCube.once('metadataUpdate', function (metadata) {
